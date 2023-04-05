@@ -1,0 +1,74 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #6096BA10;
+
+    border: 1px solid rgba(255, 255, 255, 0.295);
+    border-radius: 8px;
+
+    padding: 20px 20px;
+    
+    box-sizing: border-box;
+    
+    width: 100%;
+}
+
+.completed{
+    color: #43c2a8;
+    text-decoration: line-through;
+}
+
+.notCompleted{
+    color: #ce425c;
+}
+
+.taskText{
+    max-width: 80%;
+}
+
+.taskControllers{
+    display: flex;
+    gap: 1rem;
+}
+
+.done, .exclude{
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.done{
+    background: #99C1B9;
+}
+.done:hover{
+    background: #6eb8a9;
+    border: 2px solid #5dbeab;
+}
+.done:active{
+    background: #5dbeab;
+}
+
+.exclude{
+    background: #D88C9A;
+}
+.exclude:hover{
+    background: #cf7182;
+    border: 2px solid #c7586c;
+}
+.exclude:active{
+    background: #c7586c;
+}
+
+@media only screen and (max-width: 700px) {
+    .done, .exclude{
+        font-size: 16px;
+        padding: 0.2rem!important;
+        cursor: pointer;
+    }
+}

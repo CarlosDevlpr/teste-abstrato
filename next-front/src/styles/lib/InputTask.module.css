@@ -1,0 +1,33 @@
+.insertForm{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    border: 1px solid white;
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+
+.insertInput{
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.insertInput:active{
+    border: none;
+    outline: none;
+}
+
+.insertButton{
+    padding: 10px 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+.insertPlusButton{
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}

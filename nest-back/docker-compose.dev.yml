@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  todoapp:
+    container_name: todoapp
+    build: .
+    command: sh -c "yarn install && yarn build && yarn start"
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/usr/app
+      - node_modules:/usr/app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - todo-mongodb
+
+  todo-mongodb:
+    image: mongo:4.4
+    container_name: todo-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: www-data
+      MONGO_INITDB_ROOT_PASSWORD: xxvPHHWfrg8rkJrAic2W3fK2Q6ayQo4haWYBJJKot
+    volumes:
+      - mongodb-data:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+
+volumes:
+  mongodb-data:
+  node_modules:
